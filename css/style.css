@@ -51,11 +51,10 @@ p{
 
     #ulStyle{
         text-align: right;
-       
-
+        padding: 5px;
     }
 
-    li{
+    #liStyle{
 
         display: inline; 
         width: 50%;
@@ -64,3 +63,32 @@ p{
         margin: 5px;
         
     }
+
+
+
+#topList{
+    order: initial;
+}
+
+
+#guessField{
+    display:table-cell;
+    float: left;
+    text-align: center;
+    background-color: plum;
+}
+
+#gessField{
+    text-align: center;
+    float: right;
+    
+    
+}
+
+
+
+
+
+
+
+

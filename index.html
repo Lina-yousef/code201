@@ -10,13 +10,13 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
-<body style="display:block;" >
+<body style="display:block;">
     <header>
         <nav>
             <ul id="ulStyle" >
-                <li  i class="fas fa-home" type="Home"> Home</li>
-                <li><span class="login" ></span> Login</li>
-                <li style="display: inline;" i class="fas fa-bars" type="menu"></i>  </li>
+                <li id="liStyle" i class="fas fa-home" type="Home"> Home</li>
+                <li id="liStyle"><span class="login"></span> Login</li>
+                <li id="liStyle" style="display: inline;" i class="fas fa-bars" type="menu"></i> </li>
 
             </ul>
         </nav>
@@ -26,13 +26,40 @@
 
         <h2 id="headStyle"> </br>Lina Al-mashaikh </h2>
 
-        <p> </br>I'm a Software Engineer</br>
-            From Alzaytoonah University of Jordan.</br>
-            I worked in several fields since graduation </br>
-            And I want to be a professional software developer</br></br></p>
+
+            <ul id="bioList">
+                <li><B>Education :</B> A Software Engineer </li>
+                <li><b>From :</b> Alzaytoonah University of Jordan.</li>
+                <li><B>Experince :</B> I worked in several fields since graduation</li>
+                <li><b>Goals :</b> I want to be a professional software developer </li>
+            </ul>
+    
 
         <img class="imgDisplay" src="https://ca.slack-edge.com/TNGRRLUMA-U01HF0YAKJQ-01dfe3fc9729-512"
             alt="Lina's photo"></br>
+
+        <nav id="guessField">
+            <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+            <input type="submit" value="Submit guess" class="guessSubmit">
+        </nav>
+
+        <h2> My Top 10 Places to visit </br></br> :</h2>
+            <div>
+            <ol id="topList">
+                <li> Alquds</li>
+                <li>Bali</li>
+                <li>Rome</li>
+                <li>London </li>
+                <li>Tokyo</li>
+                <li>Barcelona</li>
+                <li>New York City</li>
+                <li>Santorini</li>
+                <li>Amsterdam</li>
+                <li>Maldives</li>
+
+            </ol></div>
+
+       
 
 
     </main>
