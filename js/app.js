@@ -1,4 +1,5 @@
-'use strict';
+
+'use strict'
 var score = 0;
 //greeting with user's name
 var userName = prompt('Please enter your name ?')
@@ -30,6 +31,7 @@ document.write('Thank you ..' + userName);
 // Lab 03
 
 // let the user guesses the correct number with just 4 chances
+
 
 
 
@@ -86,6 +88,36 @@ function ques7() {
         alert('This is my top favourate colors' + favColor);
         console.log(userColor);
 
+var correctNum = 21;
+var guessNum;
+
+for (var i = 0; i < 4; i++) {
+    guessNum = prompt('Guess a random number between 1 to 50 ?');
+
+    if (parseInt(guessNum) == correctNum) {
+        alert('You gessed the correct number!'+correctNum);
+        score++;
+        break;
+    }
+    else if (parseInt(guessNum) < correctNum) {
+        alert('too low .. try again!');
+    }
+    else if (parseInt(guessNum) > correctNum){
+        alert('Too high .. try again!');
+    }
+    else {
+        alert('Please insert a number..');
+    }
+}
+
+console.log(guessNum);
+
+
+// let the user guesses answer with many possible answers with just 6 attempt
+
+var favColor = ['purple', 'pink', 'green', 'blue', 'white', 'yellow'];
+
+
     }
 }
 
@@ -101,6 +133,7 @@ function ques5() {
         alert('Wrong answer ..');
     }
 }
+
 
 function ques4() {
     var myAnswer4 = 'YES';
@@ -128,6 +161,28 @@ function ques3() {
     }
 }
 
+    var userColor = prompt('Guess one of my top favourate colors  ?');
+var triger=true;
+var counter=0;
+while(!favColor.includes(userColor) && triger){
+    counter++;
+    if(counter==6){
+        triger=false;
+    }
+    alert("guess again");
+    userColor = prompt('Guess one of my top favourate colors  ?');
+
+}
+if(favColor.includes(userColor)){
+score++;
+    alert('This is my top favourate colors' + favColor);
+    console.log(userColor);
+  
+
+}
+alert('Your total correct answers ' + score + '/7');
+
+
 function ques2() {
     var myAnswer2 = 'YES';
     var answer2 = prompt('Do you think Cats is my favourate pet?');
@@ -141,6 +196,7 @@ function ques2() {
     }
 }
 
+
 function ques1() {
     if (answer1.toUpperCase() === 'YES' || answer1.toUpperCase() === 'Y') {
         alert('Correct.. ' + 'Brown is not my favourate color !');
@@ -150,6 +206,10 @@ function ques1() {
         alert('Wrong answer ..');
     }
 }
+
+
+    
+
 //console.log(myNum);
 //var myNum = [1, 2, 3, 4, 5];
 
@@ -161,4 +221,6 @@ function ques1() {
 //stdNames[]
 
 //for (var i = 0; i < stdNames.length; index++) {
+
 //  console.log(stdNames[index]);
+  //  console.log(stdNames[index]);
