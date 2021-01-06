@@ -1,5 +1,5 @@
 'use strict'
-var score=0;
+var score = 0;
 //greeting with user's name
 var userName = prompt('Please enter your name ?')
 alert('Hello ' + userName + '!.. Welcome to my site')
@@ -72,76 +72,60 @@ document.write('Thank you ..' + userName);
 
 
 var correctNum = 21;
+var guessNum;
 
-for (var numOfOportunity = 0; numOfOportunity < 4; numOfOportunity++) {
-
-    var guessNum = prompt('Guess a random number between 1 to 50 ?')
+for (var i = 0; i < 4; i++) {
+    guessNum = prompt('Guess a random number between 1 to 50 ?');
 
     if (parseInt(guessNum) == correctNum) {
-        alert('You gessed the correct number!');
+        alert('You gessed the correct number!'+correctNum);
         score++;
-    } else if (parseInt(guessNum) < correctNum) {
+        break;
+    }
+    else if (parseInt(guessNum) < correctNum) {
         alert('too low .. try again!');
     }
-    else if (parseInt(guessNum > correctNum)) {
-        alert('Too high .. try again!')
+    else if (parseInt(guessNum) > correctNum){
+        alert('Too high .. try again!');
     }
+    else {
+        alert('Please insert a number..');
+    }
+}
+
+console.log(guessNum);
+
+
+// let the user guesses answer with many possible answers with just 6 attempt
+
+var favColor = ['purple', 'pink', 'green', 'blue', 'white', 'yellow'];
+
+
+
+    var userColor = prompt('Guess one of my top favourate colors  ?');
+var triger=true;
+var counter=0;
+while(!favColor.includes(userColor) && triger){
+    counter++;
+    if(counter==6){
+        triger=false;
+    }
+    alert("guess again");
+    userColor = prompt('Guess one of my top favourate colors  ?');
 
 }
-alert('Sorry ..You take all of your possible opportunities. ' + 'The correct number is ' + correctNum);
+if(favColor.includes(userColor)){
+score++;
+    alert('This is my top favourate colors' + favColor);
+    console.log(userColor);
+  
 
-
- // let the user guesses answer with many possible answers with just 6 attempt
-
-var favColor = ['purple', 'pink', 'green', 'blue', 'white', 'yellow']
-
-for (var numOfAttempt = 0; numOfAttempt < 6; numOfAttempt++) {
-
-    var userColor = prompt('Guess one of my top favourate colors  ?')
-    switch (userColor.toLocaleLowerCase()) {
-
-        case favColor[0]:
-            alert('Correct guess ..');
-            score++
-            break;
-
-        case favColor[1]:
-            alert('Correct guess ..');
-            score++;
-            break;
-        case favColor[2]:
-            alert('Correct guess ..');
-            score++;
-            break;
-        case favColor[3]:
-            alert('Correct guess ..');
-            score++;
-            break;
-        case favColor[4]:
-            alert('Correct guess ..');
-            score++;
-            break;
-        case favColor[5]:
-            alert('Correct guess ..');
-            score++;
-            break;
-
-        default:
-            alert('Invalid answer');
-
-    }
-    alert('This is my top favourate colors'+ favColor);
+}
+alert('Your total correct answers ' + score + '/7');
 
 
 
-
-
-
-}// Total score of the 7 questions
-alert('Your total correct answers '+score+'/7');
-
-
-
+    
 //console.log(myNum);
 //var myNum = [1, 2, 3, 4, 5];
 
@@ -153,16 +137,4 @@ alert('Your total correct answers '+score+'/7');
 //stdNames[]
 
 //for (var i = 0; i < stdNames.length; index++) {
-//  console.log(stdNames[index]);
-
-
-
-
-
-
-
-
-
-
-
-
+  //  console.log(stdNames[index]);
