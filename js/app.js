@@ -1,13 +1,17 @@
+'use strict';
 
-'use strict'
 var score = 0;
-//greeting with user's name
-var userName = prompt('Please enter your name ?')
-alert('Hello ' + userName + '!.. Welcome to my site')
 
-//initial var and prompt a question 
-var myAnswer1 = 'YES';
-var answer1 = prompt('Do you think Brown is my favourate color?');
+//greeting with user's name
+var userName = prompt('Please enter your name ?');
+while (userName === 0 || userName === null || userName=== '' ) {
+    alert('Wrong input please enter your name ..');
+    userName = prompt('Please enter your name ?');
+}
+alert('Hello .. ' + userName + '!.. Welcome to my site');
+
+
+
 //check if the answer matching 
 ques1();
 
@@ -33,44 +37,38 @@ document.write('Thank you ..' + userName);
 // let the user guesses the correct number with just 4 chances
 
 
+function ques6() {
+    for (var i = 0; i < 4; i++) {
+        guessNum = prompt('Guess a random number between 1 to 50 ?');
 
-
-function ques6(){
-for (var i = 0; i < 4; i++) {
-  guessNum = prompt('Guess a random number between 1 to 50 ?');
-
-  if (parseInt(guessNum) === correctNum) {
-    alert('You gessed the correct number!' + correctNum);
-    score++;
-    break;
-  }
-  else if (parseInt(guessNum) < correctNum) {
-    alert('too low .. try again!');
-  }
-  else if (parseInt(guessNum) > correctNum) {
-    alert('Too high .. try again!');
-  }
-  else {
-    alert('Please insert a number..');
-  }
-}
+        if (parseInt(guessNum) === correctNum) {
+            alert('You gessed the correct number!' + correctNum);
+            score++;
+            break;
+        }
+        else if (parseInt(guessNum) < correctNum) {
+            alert('too low .. try again!');
+        }
+        else if (parseInt(guessNum) > correctNum) {
+            alert('Too high .. try again!');
+        }
+        else {
+            alert('Please insert a number..');
+        }
+    }
 }
 console.log(guessNum);
-
 
 // let the user guesses answer with many possible answers with just 6 attempt
 
 ques7();
 alert('Your total correct answers ' + score + '/7');
 
-
-
-
-
 function ques7() {
     var favColor = ['purple', 'pink', 'green', 'blue', 'white', 'yellow'];
 
     var userColor = prompt('Guess one of my top favourate colors  ?');
+var userCol = userColor.toString();
     var triger = true;
     var counter = 0;
     while (!favColor.includes(userColor) && triger) {
@@ -78,46 +76,13 @@ function ques7() {
         if (counter === 6) {
             triger = false;
         }
-
         alert('guess again');
         userColor = prompt('Guess one of my top favourate colors  ?');
-
     }
     if (favColor.includes(userColor)) {
         score++;
         alert('This is my top favourate colors' + favColor);
         console.log(userColor);
-
-var correctNum = 21;
-var guessNum;
-
-for (var i = 0; i < 4; i++) {
-    guessNum = prompt('Guess a random number between 1 to 50 ?');
-
-    if (parseInt(guessNum) == correctNum) {
-        alert('You gessed the correct number!'+correctNum);
-        score++;
-        break;
-    }
-    else if (parseInt(guessNum) < correctNum) {
-        alert('too low .. try again!');
-    }
-    else if (parseInt(guessNum) > correctNum){
-        alert('Too high .. try again!');
-    }
-    else {
-        alert('Please insert a number..');
-    }
-}
-
-console.log(guessNum);
-
-
-// let the user guesses answer with many possible answers with just 6 attempt
-
-var favColor = ['purple', 'pink', 'green', 'blue', 'white', 'yellow'];
-
-
     }
 }
 
@@ -161,26 +126,6 @@ function ques3() {
     }
 }
 
-    var userColor = prompt('Guess one of my top favourate colors  ?');
-var triger=true;
-var counter=0;
-while(!favColor.includes(userColor) && triger){
-    counter++;
-    if(counter==6){
-        triger=false;
-    }
-    alert("guess again");
-    userColor = prompt('Guess one of my top favourate colors  ?');
-
-}
-if(favColor.includes(userColor)){
-score++;
-    alert('This is my top favourate colors' + favColor);
-    console.log(userColor);
-  
-
-}
-alert('Your total correct answers ' + score + '/7');
 
 
 function ques2() {
@@ -196,11 +141,14 @@ function ques2() {
     }
 }
 
-
 function ques1() {
-    if (answer1.toUpperCase() === 'YES' || answer1.toUpperCase() === 'Y') {
-        alert('Correct.. ' + 'Brown is not my favourate color !');
-        console.log(' Correct answer');
+    //initial var and prompt a question 
+    var myAnswer1 = 'YES';
+    var answer1 = prompt('Do you think Brown is my favourate color?');
+    //check if the answer matching 
+    if (answer1.toUpperCase() === 'YES' || answer1.toUpperCase() === 'Y'){
+        alert('Correct.. ' + 'Cat is my favourate pet!');
+        console.log('Correct answer');
         score++;
     } else {
         alert('Wrong answer ..');
@@ -208,7 +156,6 @@ function ques1() {
 }
 
 
-    
 
 //console.log(myNum);
 //var myNum = [1, 2, 3, 4, 5];

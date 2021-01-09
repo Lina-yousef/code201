@@ -4,6 +4,8 @@ header{
     text-align: center;
     background-color: RGB(247, 202, 201);
     position: sticky;
+    opacity: 50px;
+
 }
 
 footer{
@@ -11,14 +13,15 @@ footer{
     background-color: RGB(247, 202, 201);
     position: sticky;
     bottom: 0%;
+    opacity: 50px;
 }
 
 body{
     width: 100%;
     height: 100%;
-    background-color:rgb(250, 246, 250);
-    
+   
 }
+
 
 .imgDisplay{
     display: block;
@@ -63,6 +66,16 @@ p{
         margin: 5px;
         
     }
+    
+    #bioList{
+        
+        padding-inline-start:  20%;
+        border: 15px solid rgb(196, 236, 196);
+        float: right;
+        margin:4px;
+        padding: 1%;
+                
+    }
 
 
 
@@ -84,6 +97,7 @@ p{
     
     
 }
+   
 
 
 
